@@ -1,1 +1,0 @@
-# programacao-para-dispositivos-moveis
