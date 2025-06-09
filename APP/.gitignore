@@ -1,0 +1,57 @@
+# LOGS
+logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+pnpm-debug.*
+lerna-debug.*
+
+# DEPENDÊNCIAS
+node_modules/
+
+# ARQUIVOS GERADOS PELO EXPO
+.expo/
+dist/
+dist-ssr
+web-build/
+expo-env.d.ts
+
+# CONFIGURAÇÕES DE EDITORES
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ARQUIVOS NATIVOS
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# METRO
+.metro-health-check*
+
+# macOS
+.DS_Store
+*.pem
+
+# ARQUIVOS DE AMBIENTE LOCAL
+.env*.local
+*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# FIREBASE ADMIN SDK
+backend/serviceAccountKey.json
+
+.env
