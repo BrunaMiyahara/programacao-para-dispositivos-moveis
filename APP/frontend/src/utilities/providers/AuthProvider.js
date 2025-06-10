@@ -16,7 +16,7 @@ const AuthProvider = ({ children }) => {
   const [usuario, setUsuario] = useState(null);
   const [loader, setLoader] = useState(true);
   const [error, setError] = useState('');
-
+  
   const auth = getAuth(app);
 
   // SIGN UP NOVO USUARIO
