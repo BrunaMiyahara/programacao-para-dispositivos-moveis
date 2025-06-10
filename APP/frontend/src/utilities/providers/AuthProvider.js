@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  // UPDATE PERFIL DO USUARIO
+  // ATUALIZAR PERFIL DO USUARIO
   const updateUser = async (nome, fotoUrl) => {
     try {
       await updateProfile(auth.currentUser, {
@@ -66,7 +66,7 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  // OBSERVER FOR USERS
+  // OBSERVADOR DE AUTENTICAÇÃO DO USUÁRIO (Firebase)
   useEffect(() => {
   const unsubscribe = onAuthStateChanged(auth, async (user) => {
     if (user) {
