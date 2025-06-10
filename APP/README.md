@@ -1,4 +1,4 @@
-Adaptei um projeto de React + Vite da matéria passada, Contrução de Frontend, para um aplicativo mobile React Native com Firebase Authentication (\frontend). MongoDB Atlas para armazenar e recuperar os dados (\backend).
+Adaptei um projeto de React + Vite da matéria passada, Contrução de Frontend, para um aplicativo mobile React Native com Firebase Authentication (frontend). MongoDB Atlas para armazenar e recuperar os dados (backend).
 
 Para funcionar corretamente o servidor (computador - VsCode) e o app (celular - Expo Go) precisam estar rodando na mesma rede Wi-Fi.
 
