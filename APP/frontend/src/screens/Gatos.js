@@ -7,7 +7,7 @@ import Loading from '../components/Loading';
 
 const { width } = Dimensions.get('window');
 
-// Custom hook para calcular idade detalhada
+// CUSTOM HOOK
 function useIdadeDetalhada(nascimento) {
   if (nascimento?.indefinido) return { texto: "Idade indefinida", meses: null, anos: null };
   const hoje = new Date();
@@ -34,7 +34,6 @@ function useIdadeDetalhada(nascimento) {
   return { texto, meses: totalMeses, anos };
 }
 
-// Carrossel com setas
 const CarrosselFotos = ({ fotos }) => {
   const [fotoAtiva, setFotoAtiva] = useState(0);
 
@@ -101,16 +100,12 @@ const Gatos = () => {
     }, [])
   );
 
-  // Filtro por idade (anos, meses ou filhote) e cor
   const gatosFiltrados = gatos.filter(gato => {
-    // Filtro de cor
     if (corFiltro && gato.cor_pelo && !gato.cor_pelo.toLowerCase().includes(corFiltro.toLowerCase())) {
       return false;
     }
-    // Filtro de idade
     if (!idadeFiltro) return true;
 
-    // Filtro para idade indefinida
     if (idadeFiltro.toLowerCase() === "indefinida") {
       return gato.nascimento?.indefinido === true;
     }
@@ -125,7 +120,6 @@ const Gatos = () => {
       const num = parseInt(idadeFiltro);
       return idade.anos === num;
     }
-    // Se for só número, filtra por anos
     const num = parseInt(idadeFiltro);
     return idade.anos === num;
   });
@@ -154,7 +148,6 @@ const Gatos = () => {
     );
   };
 
-  // Checagem robusta para admin
   const isAdmin = !!usuario && typeof usuario.role === "string" && usuario.role.trim().toLowerCase() === "admin";
 
   if (loading) {
@@ -163,7 +156,6 @@ const Gatos = () => {
 
   return (
     <View style={styles.container}>
-      {/* Cabeçalho fixo */}
       <View style={styles.headerFixed}>
         <Text style={styles.heading}>NOSSOS GATOS</Text>
         <Text style={styles.subheading}>
@@ -211,7 +203,6 @@ const Gatos = () => {
         </View>
       </View>
 
-      {/* Lista de gatos */}
       <FlatList
         data={gatosFiltrados}
         renderItem={renderItem}
