@@ -23,6 +23,7 @@ BACKEND:
   6- Baixe o .json → salve em backend/serviceAccountKey.json
 
   Para rodar o servidor:
+    npm i
     npm start
 
 
@@ -41,4 +42,5 @@ FRONTEND:
     URL_EXPO_API_PUBLICA=http://192.168.43.241:4000 (http://IPV4:PORT do backend)
 
   Para rodar o aplicativo:
+    npm i
     npx expo start -c
